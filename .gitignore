@@ -1,0 +1,12 @@
+.venv
+.deepeval/
+.chroma/
+venv/
+__pycache__/
+*.pyc
+.env
+.coverage
+report.html
+package/
+.pytest_cache/
+.DS_Store

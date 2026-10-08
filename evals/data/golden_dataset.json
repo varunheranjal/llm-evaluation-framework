@@ -1,0 +1,541 @@
+{
+  "name": "Internal Company RAG Golden Dataset",
+  "version": "1.0",
+  "description": "Golden evaluation cases for the demo internal-company RAG application. Cases cover project delivery, resources, sales opportunities, accounts, revenue, cross-document reasoning, missing information, and out-of-domain behavior.",
+  "case_count": 38,
+  "cases": [
+    {
+      "id": "project_graphrag_owner",
+      "category": "project_resource",
+      "difficulty": "easy",
+      "input": "Who is working on the GraphRAG project and what is their allocation?",
+      "expected_output": "Alex Martin is working on the GraphRAG Platform project with a 70% allocation.",
+      "expected_sources": [
+        "business/projects/PRJ004_graphrag_platform.md"
+      ],
+      "must_include": [
+        "Alex Martin",
+        "70%"
+      ]
+    },
+    {
+      "id": "project_graphrag_status_cost",
+      "category": "project",
+      "difficulty": "easy",
+      "input": "What is the status and actual cost of the GraphRAG project?",
+      "expected_output": "The GraphRAG Platform project is delayed and has an actual cost of $720,000.",
+      "expected_sources": [
+        "business/projects/PRJ004_graphrag_platform.md"
+      ],
+      "must_include": [
+        "Delayed",
+        "$720,000"
+      ]
+    },
+    {
+      "id": "project_graphrag_delay",
+      "category": "project",
+      "difficulty": "easy",
+      "input": "How many days is the GraphRAG Platform project delayed?",
+      "expected_output": "The GraphRAG Platform project is delayed by 35 days.",
+      "expected_sources": [
+        "business/projects/PRJ004_graphrag_platform.md"
+      ],
+      "must_include": [
+        "35 days"
+      ]
+    },
+    {
+      "id": "project_factory_ai_owner",
+      "category": "project_resource",
+      "difficulty": "easy",
+      "input": "Who is assigned to the Factory AI Insights project and what is their allocation?",
+      "expected_output": "Emma White is assigned to Factory AI Insights with a 60% allocation.",
+      "expected_sources": [
+        "business/projects/PRJ005_factory_ai_insights.md"
+      ],
+      "must_include": [
+        "Emma White",
+        "60%"
+      ]
+    },
+    {
+      "id": "project_factory_ai_cost_delay",
+      "category": "project",
+      "difficulty": "easy",
+      "input": "What is the actual cost and delay for the Factory AI Insights project?",
+      "expected_output": "Factory AI Insights has an actual cost of $620,000 and is delayed by 45 days.",
+      "expected_sources": [
+        "business/projects/PRJ005_factory_ai_insights.md"
+      ],
+      "must_include": [
+        "$620,000",
+        "45 days"
+      ]
+    },
+    {
+      "id": "project_retail_recommendation_owner",
+      "category": "project_resource",
+      "difficulty": "easy",
+      "input": "Who is working on the Retail Recommendation Engine and what is their allocation?",
+      "expected_output": "Chris Green is working on the Retail Recommendation Engine with an 80% allocation.",
+      "expected_sources": [
+        "business/projects/PRJ006_retail_recommendation_engine.md"
+      ],
+      "must_include": [
+        "Chris Green",
+        "80%"
+      ]
+    },
+    {
+      "id": "project_snowflake_resource",
+      "category": "project_resource",
+      "difficulty": "easy",
+      "input": "Who worked on the Snowflake Platform project and what skill did they provide?",
+      "expected_output": "Sarah Wilson worked on the Snowflake Platform project, providing Snowflake Engineering skills.",
+      "expected_sources": [
+        "business/projects/PRJ002_snowflake_platform.md"
+      ],
+      "must_include": [
+        "Sarah Wilson",
+        "Snowflake Engineering"
+      ]
+    },
+    {
+      "id": "project_azure_modernization_budget",
+      "category": "project",
+      "difficulty": "medium",
+      "input": "Did the Azure Modernization project finish under or over budget, and by how much?",
+      "expected_output": "Azure Modernization finished $50,000 under budget: the budget was $700,000 and the actual cost was $650,000.",
+      "expected_sources": [
+        "business/projects/PRJ001_azure_modernization.md"
+      ],
+      "must_include": [
+        "$50,000",
+        "under budget"
+      ]
+    },
+    {
+      "id": "opportunity_graphrag_sales_rep",
+      "category": "opportunity",
+      "difficulty": "easy",
+      "input": "Who handled the GraphRAG Platform sales opportunity and what was the deal value?",
+      "expected_output": "Alice Brown handled the GraphRAG Platform opportunity, which had a deal value of $650,000.",
+      "expected_sources": [
+        "business/opportunities/OPP007_graphrag_platform.md"
+      ],
+      "must_include": [
+        "Alice Brown",
+        "$650,000"
+      ]
+    },
+    {
+      "id": "opportunity_medcore_data_lake",
+      "category": "opportunity",
+      "difficulty": "easy",
+      "input": "Which client had the AWS Data Lake opportunity, what was it worth, and why was it lost?",
+      "expected_output": "MedCore had the AWS Data Lake opportunity. It was worth $450,000 and was lost because of Proposal Delay.",
+      "expected_sources": [
+        "business/opportunities/OPP002_aws_data_lake.md"
+      ],
+      "must_include": [
+        "MedCore",
+        "$450,000",
+        "Proposal Delay"
+      ]
+    },
+    {
+      "id": "opportunity_healthfirst_aws_migration",
+      "category": "opportunity",
+      "difficulty": "easy",
+      "input": "Why was HealthFirst's AWS Migration opportunity lost and what was its value?",
+      "expected_output": "HealthFirst's AWS Migration opportunity was worth $500,000 and was lost because of an AWS Skill Shortage.",
+      "expected_sources": [
+        "business/opportunities/OPP001_aws_migration.md"
+      ],
+      "must_include": [
+        "$500,000",
+        "AWS Skill Shortage"
+      ]
+    },
+    {
+      "id": "opportunity_fintrust_azure",
+      "category": "opportunity",
+      "difficulty": "easy",
+      "input": "What was the value and outcome of FinTrust's Azure Modernization opportunity?",
+      "expected_output": "FinTrust's Azure Modernization opportunity was worth $700,000 and was won.",
+      "expected_sources": [
+        "business/opportunities/OPP003_azure_modernization.md"
+      ],
+      "must_include": [
+        "$700,000",
+        "Won"
+      ]
+    },
+    {
+      "id": "opportunity_globalbank_snowflake",
+      "category": "opportunity",
+      "difficulty": "easy",
+      "input": "Who was the sales representative for GlobalBank's Snowflake Platform opportunity?",
+      "expected_output": "Sarah Lee was the sales representative for GlobalBank's Snowflake Platform opportunity.",
+      "expected_sources": [
+        "business/opportunities/OPP004_snowflake_platform.md"
+      ],
+      "must_include": [
+        "Sarah Lee"
+      ]
+    },
+    {
+      "id": "opportunity_retailmax_databricks",
+      "category": "opportunity",
+      "difficulty": "easy",
+      "input": "What service and deal value were associated with RetailMax's Databricks Analytics opportunity?",
+      "expected_output": "RetailMax's Databricks Analytics opportunity was for AI Analytics and had a deal value of $400,000.",
+      "expected_sources": [
+        "business/opportunities/OPP005_databricks_analytics.md"
+      ],
+      "must_include": [
+        "AI Analytics",
+        "$400,000"
+      ]
+    },
+    {
+      "id": "opportunity_healthcare_ai_assistant",
+      "category": "opportunity",
+      "difficulty": "easy",
+      "input": "What happened to the Healthcare AI Assistant opportunity and why?",
+      "expected_output": "The Healthcare AI Assistant opportunity was lost because of Resource Unavailability.",
+      "expected_sources": [
+        "business/opportunities/OPP006_healthcare_ai_assistant.md"
+      ],
+      "must_include": [
+        "Lost",
+        "Resource Unavailability"
+      ]
+    },
+    {
+      "id": "opportunity_cloud_transformation",
+      "category": "opportunity",
+      "difficulty": "easy",
+      "input": "What was the value of MedCore's Cloud Transformation opportunity and why was it lost?",
+      "expected_output": "MedCore's Cloud Transformation opportunity was worth $700,000 and was lost because of an AWS Architect Shortage.",
+      "expected_sources": [
+        "business/opportunities/OPP010_cloud_transformation.md"
+      ],
+      "must_include": [
+        "$700,000",
+        "AWS Architect Shortage"
+      ]
+    },
+    {
+      "id": "revenue_bfsi_q2",
+      "category": "revenue",
+      "difficulty": "easy",
+      "input": "What was BFSI revenue in Q2 2025?",
+      "expected_output": "BFSI revenue in Q2 2025 was $1,700,000.",
+      "expected_sources": [
+        "business/reference/revenue_report.md"
+      ],
+      "must_include": [
+        "$1,700,000"
+      ]
+    },
+    {
+      "id": "revenue_healthcare_q1",
+      "category": "revenue",
+      "difficulty": "easy",
+      "input": "What was Healthcare revenue in Q1 2025?",
+      "expected_output": "Healthcare revenue in Q1 2025 was $1,800,000.",
+      "expected_sources": [
+        "business/reference/revenue_report.md"
+      ],
+      "must_include": [
+        "$1,800,000"
+      ]
+    },
+    {
+      "id": "revenue_retail_q2",
+      "category": "revenue",
+      "difficulty": "easy",
+      "input": "What was Retail revenue in Q2 2025?",
+      "expected_output": "Retail revenue in Q2 2025 was $1,200,000.",
+      "expected_sources": [
+        "business/reference/revenue_report.md"
+      ],
+      "must_include": [
+        "$1,200,000"
+      ]
+    },
+    {
+      "id": "revenue_q1_total",
+      "category": "revenue",
+      "difficulty": "easy",
+      "input": "What was total revenue across all industries in Q1 2025?",
+      "expected_output": "Total revenue across all industries in Q1 2025 was $5,200,000.",
+      "expected_sources": [
+        "business/reference/revenue_report.md"
+      ],
+      "must_include": [
+        "$5,200,000"
+      ]
+    },
+    {
+      "id": "revenue_q2_total",
+      "category": "revenue",
+      "difficulty": "easy",
+      "input": "What was total revenue across all industries in Q2 2025?",
+      "expected_output": "Total revenue across all industries in Q2 2025 was $4,700,000.",
+      "expected_sources": [
+        "business/reference/revenue_report.md"
+      ],
+      "must_include": [
+        "$4,700,000"
+      ]
+    },
+    {
+      "id": "revenue_highest_q2",
+      "category": "revenue_reasoning",
+      "difficulty": "medium",
+      "input": "Which industry had the highest revenue in Q2 2025, and how much was it?",
+      "expected_output": "BFSI had the highest Q2 2025 revenue at $1,700,000.",
+      "expected_sources": [
+        "business/reference/revenue_report.md"
+      ],
+      "must_include": [
+        "BFSI",
+        "$1,700,000"
+      ]
+    },
+    {
+      "id": "revenue_largest_drop",
+      "category": "revenue_reasoning",
+      "difficulty": "medium",
+      "input": "Which industry had the largest revenue drop from Q1 to Q2 2025, and by how much?",
+      "expected_output": "Healthcare had the largest revenue drop, decreasing by $900,000 from $1,800,000 in Q1 to $900,000 in Q2.",
+      "expected_sources": [
+        "business/reference/revenue_report.md"
+      ],
+      "must_include": [
+        "Healthcare",
+        "$900,000"
+      ]
+    },
+    {
+      "id": "revenue_growth_tie",
+      "category": "revenue_reasoning",
+      "difficulty": "medium",
+      "input": "Which industries had the largest revenue increase from Q1 to Q2 2025?",
+      "expected_output": "BFSI and Retail tied for the largest increase, each growing by $200,000 from Q1 to Q2 2025.",
+      "expected_sources": [
+        "business/reference/revenue_report.md"
+      ],
+      "must_include": [
+        "BFSI",
+        "Retail",
+        "$200,000"
+      ]
+    },
+    {
+      "id": "cross_graphrag_sales_and_delivery",
+      "category": "cross_document",
+      "difficulty": "medium",
+      "input": "Was the GraphRAG Platform opportunity won, and what is the current status of the corresponding project?",
+      "expected_output": "Yes. The GraphRAG Platform opportunity was won, and the corresponding project is currently delayed.",
+      "expected_sources": [
+        "business/opportunities/OPP007_graphrag_platform.md",
+        "business/projects/PRJ004_graphrag_platform.md"
+      ],
+      "must_include": [
+        "Won",
+        "Delayed"
+      ]
+    },
+    {
+      "id": "cross_azure_sales_and_delivery",
+      "category": "cross_document",
+      "difficulty": "medium",
+      "input": "What happened to FinTrust's Azure Modernization opportunity, and what is the status of the resulting project?",
+      "expected_output": "FinTrust's Azure Modernization opportunity was won, and the corresponding project is completed.",
+      "expected_sources": [
+        "business/opportunities/OPP003_azure_modernization.md",
+        "business/projects/PRJ001_azure_modernization.md"
+      ],
+      "must_include": [
+        "Won",
+        "Completed"
+      ]
+    },
+    {
+      "id": "cross_factory_ai_sales_and_delivery",
+      "category": "cross_document",
+      "difficulty": "medium",
+      "input": "Was the Factory AI Insights opportunity won, and how is the corresponding project performing?",
+      "expected_output": "Yes. The Factory AI Insights opportunity was won. The project is delayed by 45 days and has an actual cost of $620,000 against a $500,000 budget.",
+      "expected_sources": [
+        "business/opportunities/OPP008_factory_ai_insights.md",
+        "business/projects/PRJ005_factory_ai_insights.md"
+      ],
+      "must_include": [
+        "Won",
+        "45 days",
+        "$620,000",
+        "$500,000"
+      ]
+    },
+    {
+      "id": "cross_retail_recommendation_sales_and_delivery",
+      "category": "cross_document",
+      "difficulty": "medium",
+      "input": "What was the outcome of the Retail Recommendation Engine opportunity, and what is the status of its project?",
+      "expected_output": "The Retail Recommendation Engine opportunity was won, and the corresponding project is completed.",
+      "expected_sources": [
+        "business/opportunities/OPP009_retail_recommendation_engine.md",
+        "business/projects/PRJ006_retail_recommendation_engine.md"
+      ],
+      "must_include": [
+        "Won",
+        "Completed"
+      ]
+    },
+    {
+      "id": "cross_delayed_projects_compare",
+      "category": "cross_document_reasoning",
+      "difficulty": "hard",
+      "input": "Between GraphRAG Platform and Factory AI Insights, which project has the larger cost overrun and the longer delay?",
+      "expected_output": "Factory AI Insights has both the larger cost overrun and the longer delay. It is $120,000 over budget and delayed by 45 days, compared with GraphRAG Platform at $70,000 over budget and 35 days delayed.",
+      "expected_sources": [
+        "business/projects/PRJ004_graphrag_platform.md",
+        "business/projects/PRJ005_factory_ai_insights.md"
+      ],
+      "must_include": [
+        "Factory AI Insights",
+        "$120,000",
+        "45 days",
+        "$70,000",
+        "35 days"
+      ]
+    },
+    {
+      "id": "cross_completed_under_budget",
+      "category": "cross_document_reasoning",
+      "difficulty": "hard",
+      "input": "Which completed projects finished under budget?",
+      "expected_output": "Azure Modernization, Snowflake Platform, Databricks Analytics, and Retail Recommendation Engine all finished under budget.",
+      "expected_sources": [
+        "business/projects/PRJ001_azure_modernization.md",
+        "business/projects/PRJ002_snowflake_platform.md",
+        "business/projects/PRJ003_databricks_analytics.md",
+        "business/projects/PRJ006_retail_recommendation_engine.md"
+      ],
+      "must_include": [
+        "Azure Modernization",
+        "Snowflake Platform",
+        "Databricks Analytics",
+        "Retail Recommendation Engine"
+      ]
+    },
+    {
+      "id": "account_technova",
+      "category": "account",
+      "difficulty": "easy",
+      "input": "What industry and region is TechNova in?",
+      "expected_output": "TechNova is in the Technology industry and the North America region.",
+      "expected_sources": [
+        "business/reference/accounts_directory.md"
+      ],
+      "must_include": [
+        "Technology",
+        "North America"
+      ]
+    },
+    {
+      "id": "account_medcore",
+      "category": "account",
+      "difficulty": "easy",
+      "input": "What industry and region is MedCore in?",
+      "expected_output": "MedCore is in the Healthcare industry and the Europe region.",
+      "expected_sources": [
+        "business/reference/accounts_directory.md"
+      ],
+      "must_include": [
+        "Healthcare",
+        "Europe"
+      ]
+    },
+    {
+      "id": "sales_rep_apac",
+      "category": "sales_rep",
+      "difficulty": "easy",
+      "input": "Which sales representative covers APAC?",
+      "expected_output": "Rahul Gupta is the sales representative for the APAC region.",
+      "expected_sources": [
+        "business/reference/sales_team.md"
+      ],
+      "must_include": [
+        "Rahul Gupta",
+        "APAC"
+      ]
+    },
+    {
+      "id": "negative_graphrag_completion_date",
+      "category": "missing_information",
+      "difficulty": "medium",
+      "input": "What is the planned completion date for the GraphRAG Platform project?",
+      "expected_output": "The knowledge base does not provide a planned completion date for the GraphRAG Platform project.",
+      "expected_sources": [
+        "business/projects/PRJ004_graphrag_platform.md"
+      ],
+      "must_include": [
+        "does not provide"
+      ]
+    },
+    {
+      "id": "negative_technova_ceo",
+      "category": "missing_information",
+      "difficulty": "medium",
+      "input": "Who is the CEO of TechNova?",
+      "expected_output": "The knowledge base does not provide information about the CEO of TechNova.",
+      "expected_sources": [
+        "business/reference/accounts_directory.md"
+      ],
+      "must_include": [
+        "does not provide"
+      ]
+    },
+    {
+      "id": "negative_bfsi_q3",
+      "category": "missing_information",
+      "difficulty": "medium",
+      "input": "What was BFSI revenue in Q3 2025?",
+      "expected_output": "The knowledge base does not provide BFSI revenue for Q3 2025.",
+      "expected_sources": [
+        "business/reference/revenue_report.md"
+      ],
+      "must_include": [
+        "does not provide"
+      ]
+    },
+    {
+      "id": "negative_out_of_domain_capital",
+      "category": "out_of_domain",
+      "difficulty": "easy",
+      "input": "What is the capital of France?",
+      "expected_output": "I can only answer questions about the internal company knowledge base.",
+      "expected_sources": [],
+      "must_include": [
+        "internal company knowledge base"
+      ]
+    },
+    {
+      "id": "negative_out_of_domain_weather",
+      "category": "out_of_domain",
+      "difficulty": "easy",
+      "input": "What is the weather in London today?",
+      "expected_output": "I can only answer questions about the internal company knowledge base.",
+      "expected_sources": [],
+      "must_include": [
+        "internal company knowledge base"
+      ]
+    }
+  ]
+}

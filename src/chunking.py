@@ -1,26 +1,47 @@
-# Splits the input text into fixed-size chunks, with each new chunk overlapping part of the previous one to preserve context between chunks.
-
-# Example: chunk_size=10, chunk_overlap=2 -> chunks start at 0, 8, 16, 24, etc.
-
-# Basically --->> fixed_size_chunk("abcdefghijklmnopqrstuvwxyz", 10, 2) will output -->> ['abcdefghij', 'ijklmnopqr', 'qrstuvwxyz']
+"""Text chunking utilities."""
 
 
-def fixed_size_chunk(text: str, chunk_size: int, chunk_overlap: int) -> list[str]:
+def fixed_size_chunk(
+    text: str,
+    chunk_size: int,
+    chunk_overlap: int,
+) -> list[str]:
+    """Split text into overlapping fixed-size chunks."""
+
+    text = text.strip()
 
     if not text:
         return []
 
+    if chunk_size <= 0:
+        raise ValueError(
+            "chunk_size must be greater than zero"
+        )
+
+    if chunk_overlap < 0:
+        raise ValueError(
+            "chunk_overlap cannot be negative"
+        )
+
+    if chunk_overlap >= chunk_size:
+        raise ValueError(
+            "chunk_overlap must be smaller than chunk_size"
+        )
+
     step = chunk_size - chunk_overlap
+
     chunks = []
 
-    start = 0
-    while start < len(text):
-        chunk = text[start: start + chunk_size].strip()
+    for start in range(
+        0,
+        len(text),
+        step,
+    ):
+        chunk = text[
+            start:start + chunk_size
+        ].strip()
 
         if chunk:
             chunks.append(chunk)
-        
-        start += step
-    
+
     return chunks
-    

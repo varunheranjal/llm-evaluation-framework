@@ -1,0 +1,724 @@
+llm-evaluation-framework git:(master) ✗ EVAL_TIER=full python -m evals.run_eval
+
+Running the RAG application
+============================================================
+[1/38] Who is working on the GraphRAG project and what is their allocation?
+[2/38] What is the status and actual cost of the GraphRAG project?
+[3/38] How many days is the GraphRAG Platform project delayed?
+[4/38] Who is assigned to the Factory AI Insights project and what is their allocation?
+[5/38] What is the actual cost and delay for the Factory AI Insights project?
+[6/38] Who is working on the Retail Recommendation Engine and what is their allocation?
+[7/38] Who worked on the Snowflake Platform project and what skill did they provide?
+[8/38] Did the Azure Modernization project finish under or over budget, and by how much?
+[9/38] Who handled the GraphRAG Platform sales opportunity and what was the deal value?
+[10/38] Which client had the AWS Data Lake opportunity, what was it worth, and why was it lost?
+[11/38] Why was HealthFirst's AWS Migration opportunity lost and what was its value?
+[12/38] What was the value and outcome of FinTrust's Azure Modernization opportunity?
+[13/38] Who was the sales representative for GlobalBank's Snowflake Platform opportunity?
+[14/38] What service and deal value were associated with RetailMax's Databricks Analytics opportunity?
+[15/38] What happened to the Healthcare AI Assistant opportunity and why?
+[16/38] What was the value of MedCore's Cloud Transformation opportunity and why was it lost?
+[17/38] What was BFSI revenue in Q2 2025?
+[18/38] What was Healthcare revenue in Q1 2025?
+[19/38] What was Retail revenue in Q2 2025?
+[20/38] What was total revenue across all industries in Q1 2025?
+[21/38] What was total revenue across all industries in Q2 2025?
+[22/38] Which industry had the highest revenue in Q2 2025, and how much was it?
+[23/38] Which industry had the largest revenue drop from Q1 to Q2 2025, and by how much?
+[24/38] Which industries had the largest revenue increase from Q1 to Q2 2025?
+[25/38] Was the GraphRAG Platform opportunity won, and what is the current status of the corresponding project?
+[26/38] What happened to FinTrust's Azure Modernization opportunity, and what is the status of the resulting project?
+[27/38] Was the Factory AI Insights opportunity won, and how is the corresponding project performing?
+[28/38] What was the outcome of the Retail Recommendation Engine opportunity, and what is the status of its project?
+[29/38] Between GraphRAG Platform and Factory AI Insights, which project has the larger cost overrun and the longer delay?
+[30/38] Which completed projects finished under budget?
+[31/38] What industry and region is TechNova in?
+[32/38] What industry and region is MedCore in?
+[33/38] Which sales representative covers APAC?
+[34/38] What is the planned completion date for the GraphRAG Platform project?
+[35/38] Who is the CEO of TechNova?
+[36/38] What was BFSI revenue in Q3 2025?
+[37/38] What is the capital of France?
+[38/38] What is the weather in London today?
+
+Retriever Evaluation
+============================================================
+✨ You're running DeepEval's latest Contextual Relevancy Metric! (using gpt-4.1, strict=False, async_mode=True)...
+✨ You're running DeepEval's latest Contextual Recall Metric! (using gpt-4.1, strict=False, async_mode=True)...
+✨ You're running DeepEval's latest Contextual Precision Metric! (using gpt-4.1, strict=False, async_mode=True)...
+
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ 🚀 DeepEval Evaluation Results                                                                                                                                                              │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_0                                                                                                                                                                             │
+│  ├──   Input:              Who is working on the GraphRAG project and what is their allocation?                                                                                             │
+│  │     Actual Output:      The GraphRAG project is assigned to Alex Martin, who is working in Neo4j Engineering with a 70% allocation. This project is for the client TechNova and is       │
+│  │                         currently delayed. (Source: business/projects/PRJ004_graphrag_platform.md)                                                                                       │
+│  │     Expected Output:    Alex Martin is working on the GraphRAG Platform project with a 70% allocation.                                                                                   │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.14                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_1                                                                                                                                                                             │
+│  ├──   Input:              What is the status and actual cost of the GraphRAG project?                                                                                                      │
+│  │     Actual Output:      The GraphRAG project is currently delayed. Its budget was $650,000, but the actual cost has reached $720,000. The project is behind schedule by 35 days.         │
+│  │                         (Source: business/projects/PRJ004_graphrag_platform.md)                                                                                                          │
+│  │     Expected Output:    The GraphRAG Platform project is delayed and has an actual cost of $720,000.                                                                                     │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.50                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_2                                                                                                                                                                             │
+│  ├──   Input:              How many days is the GraphRAG Platform project delayed?                                                                                                          │
+│  │     Actual Output:      The GraphRAG Platform project is delayed by 35 days. (Source: business/projects/PRJ004_graphrag_platform.md)                                                     │
+│  │     Expected Output:    The GraphRAG Platform project is delayed by 35 days.                                                                                                             │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.11                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_3                                                                                                                                                                             │
+│  ├──   Input:              Who is assigned to the Factory AI Insights project and what is their allocation?                                                                                 │
+│  │     Actual Output:      The Factory AI Insights project is assigned to Emma White, who has a 60% allocation on the project.                                                              │
+│  │     Expected Output:    Emma White is assigned to Factory AI Insights with a 60% allocation.                                                                                             │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.17                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_4                                                                                                                                                                             │
+│  ├──   Input:              What is the actual cost and delay for the Factory AI Insights project?                                                                                           │
+│  │     Actual Output:      The Factory AI Insights project has an actual cost of $620,000 and is delayed by 45 days. The project budget was originally $500,000. (Source:                   │
+│  │                         business/projects/PRJ005_factory_ai_insights.md)                                                                                                                 │
+│  │     Expected Output:    Factory AI Insights has an actual cost of $620,000 and is delayed by 45 days.                                                                                    │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.22                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_5                                                                                                                                                                             │
+│  ├──   Input:              Who is working on the Retail Recommendation Engine and what is their allocation?                                                                                 │
+│  │     Actual Output:      Chris Green is working on the Retail Recommendation Engine project with an allocation of 80%.                                                                    │
+│  │     Expected Output:    Chris Green is working on the Retail Recommendation Engine with an 80% allocation.                                                                               │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.16                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_6                                                                                                                                                                             │
+│  ├──   Input:              Who worked on the Snowflake Platform project and what skill did they provide?                                                                                    │
+│  │     Actual Output:      The Snowflake Platform project was worked on by Sarah Wilson, who provided Snowflake Engineering skills with a 90% allocation.                                   │
+│  │     Expected Output:    Sarah Wilson worked on the Snowflake Platform project, providing Snowflake Engineering skills.                                                                   │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.35                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_7                                                                                                                                                                             │
+│  ├──   Input:              Did the Azure Modernization project finish under or over budget, and by how much?                                                                                │
+│  │     Actual Output:      The Azure Modernization project finished under budget by $50,000. The budget was $700,000, and the actual cost was $650,000. The project had no delay.           │
+│  │                         (source: project document PRJ001_azure_modernization.md)                                                                                                         │
+│  │     Expected Output:    Azure Modernization finished $50,000 under budget: the budget was $700,000 and the actual cost was $650,000.                                                     │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.11                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_8                                                                                                                                                                             │
+│  ├──   Input:              Who handled the GraphRAG Platform sales opportunity and what was the deal value?                                                                                 │
+│  │     Actual Output:      The GraphRAG Platform sales opportunity was handled by Alice Brown. The deal value was $650,000.                                                                 │
+│  │     Expected Output:    Alice Brown handled the GraphRAG Platform opportunity, which had a deal value of $650,000.                                                                       │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.25                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_9                                                                                                                                                                             │
+│  ├──   Input:              Which client had the AWS Data Lake opportunity, what was it worth, and why was it lost?                                                                          │
+│  │     Actual Output:      The client for the AWS Data Lake opportunity was MedCore. The opportunity was worth $450,000. It was lost due to a proposal delay, specifically a delay in       │
+│  │                         the proposal review by 3 weeks. This information is from the business opportunity record OPP002.                                                                 │
+│  │     Expected Output:    MedCore had the AWS Data Lake opportunity. It was worth $450,000 and was lost because of Proposal Delay.                                                         │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.64                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_10                                                                                                                                                                            │
+│  ├──   Input:              Why was HealthFirst's AWS Migration opportunity lost and what was its value?                                                                                     │
+│  │     Actual Output:      HealthFirst's AWS Migration opportunity was lost due to an "AWS Skill Shortage." The value of this opportunity was $500,000. This was a cloud migration          │
+│  │                         project handled by sales representative John Smith.                                                                                                              │
+│  │     Expected Output:    HealthFirst's AWS Migration opportunity was worth $500,000 and was lost because of an AWS Skill Shortage.                                                        │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.55                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_11 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_12                                                                                                                                                                            │
+│  ├──   Input:              Who was the sales representative for GlobalBank's Snowflake Platform opportunity?                                                                                │
+│  │     Actual Output:      The sales representative for GlobalBank's Snowflake Platform opportunity was Sarah Lee.                                                                          │
+│  │     Expected Output:    Sarah Lee was the sales representative for GlobalBank's Snowflake Platform opportunity.                                                                          │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.14                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_13                                                                                                                                                                            │
+│  ├──   Input:              What service and deal value were associated with RetailMax's Databricks Analytics opportunity?                                                                   │
+│  │     Actual Output:      The service associated with RetailMax's Databricks Analytics opportunity was AI Analytics, and the deal value was $400,000.                                      │
+│  │     Expected Output:    RetailMax's Databricks Analytics opportunity was for AI Analytics and had a deal value of $400,000.                                                              │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.44                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_14 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_15                                                                                                                                                                            │
+│  ├──   Input:              What was the value of MedCore's Cloud Transformation opportunity and why was it lost?                                                                            │
+│  │     Actual Output:      The value of MedCore's Cloud Transformation opportunity was $700,000. It was lost due to an AWS Architect Shortage.                                              │
+│  │     Expected Output:    MedCore's Cloud Transformation opportunity was worth $700,000 and was lost because of an AWS Architect Shortage.                                                 │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.21                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_16                                                                                                                                                                            │
+│  ├──   Input:              What was BFSI revenue in Q2 2025?                                                                                                                                │
+│  │     Actual Output:      The BFSI revenue in Q2 2025 was $1,700,000. (Source: revenue_report.md)                                                                                          │
+│  │     Expected Output:    BFSI revenue in Q2 2025 was $1,700,000.                                                                                                                          │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.08                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_17                                                                                                                                                                            │
+│  ├──   Input:              What was Healthcare revenue in Q1 2025?                                                                                                                          │
+│  │     Actual Output:      Healthcare revenue in Q1 2025 was $1,800,000. (Source: business/reference/revenue_report.md)                                                                     │
+│  │     Expected Output:    Healthcare revenue in Q1 2025 was $1,800,000.                                                                                                                    │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.08                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_18                                                                                                                                                                            │
+│  ├──   Input:              What was Retail revenue in Q2 2025?                                                                                                                              │
+│  │     Actual Output:      The Retail revenue in Q2 2025 was $1,200,000. (Source: business/reference/revenue_report.md)                                                                     │
+│  │     Expected Output:    Retail revenue in Q2 2025 was $1,200,000.                                                                                                                        │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.11                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_19                                                                                                                                                                            │
+│  ├──   Input:              What was total revenue across all industries in Q1 2025?                                                                                                         │
+│  │     Actual Output:      The total revenue across all industries in Q1 2025 was $5,200,000.                                                                                               │
+│  │     Expected Output:    Total revenue across all industries in Q1 2025 was $5,200,000.                                                                                                   │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.38                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_20                                                                                                                                                                            │
+│  ├──   Input:              What was total revenue across all industries in Q2 2025?                                                                                                         │
+│  │     Actual Output:      The total revenue across all industries in Q2 2025 was $4,700,000.                                                                                               │
+│  │     Expected Output:    Total revenue across all industries in Q2 2025 was $4,700,000.                                                                                                   │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.46                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_21                                                                                                                                                                            │
+│  ├──   Input:              Which industry had the highest revenue in Q2 2025, and how much was it?                                                                                          │
+│  │     Actual Output:      The BFSI industry had the highest revenue in Q2 2025, with a revenue amount of $1,700,000. (Source: Revenue Report)                                              │
+│  │     Expected Output:    BFSI had the highest Q2 2025 revenue at $1,700,000.                                                                                                              │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.15                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_22                                                                                                                                                                            │
+│  ├──   Input:              Which industry had the largest revenue drop from Q1 to Q2 2025, and by how much?                                                                                 │
+│  │     Actual Output:      The industry with the largest revenue drop from Q1 to Q2 2025 was Healthcare, with a decrease of $900,000 (from $1,800,000 in Q1 to $900,000 in Q2).             │
+│  │     Expected Output:    Healthcare had the largest revenue drop, decreasing by $900,000 from $1,800,000 in Q1 to $900,000 in Q2.                                                         │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.20                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_23                                                                                                                                                                            │
+│  ├──   Input:              Which industries had the largest revenue increase from Q1 to Q2 2025?                                                                                            │
+│  │     Actual Output:      The industries with the largest revenue increase from Q1 to Q2 2025 are:                                                                                         │
+│  │                                                                                                                                                                                          │
+│  │                         1. BFSI: Increased from $1,500,000 in Q1 to $1,700,000 in Q2 (an increase of $200,000).                                                                          │
+│  │                         2. Retail: Increased from $1,000,000 in Q1 to $1,200,000 in Q2 (an increase of $200,000).                                                                        │
+│  │                         3. Manufacturing: Increased slightly from $500,000 in Q1 to $550,000 in Q2 (an increase of $50,000).                                                             │
+│  │                                                                                                                                                                                          │
+│  │                         Healthcare and Technology saw a decrease in revenue from Q1 to Q2 2025. (Source: business/reference/revenue_report.md)                                           │
+│  │     Expected Output:    BFSI and Retail tied for the largest increase, each growing by $200,000 from Q1 to Q2 2025.                                                                      │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.50                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_24 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_25 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_26                                                                                                                                                                            │
+│  ├──   Input:              Was the Factory AI Insights opportunity won, and how is the corresponding project performing?                                                                    │
+│  │     Actual Output:      The Factory AI Insights opportunity was won. It is a $500,000 AI Development deal for AutoWorks, handled by Sarah Lee.                                           │
+│  │                                                                                                                                                                                          │
+│  │                         The corresponding project, also named Factory AI Insights, is currently delayed. The project budget was $500,000, but the actual cost has reached $620,000,      │
+│  │                         with a delay of 45 days. Emma White is assigned as the Azure Architecture resource on this project with a 60% allocation.                                        │
+│  │     Expected Output:    Yes. The Factory AI Insights opportunity was won. The project is delayed by 45 days and has an actual cost of $620,000 against a $500,000 budget.                │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.60                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 0.75                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_27 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_28                                                                                                                                                                            │
+│  ├──   Input:              Between GraphRAG Platform and Factory AI Insights, which project has the larger cost overrun and the longer delay?                                               │
+│  │     Actual Output:      The Factory AI Insights project has the larger cost overrun and longer delay compared to the GraphRAG Platform project.                                          │
+│  │                                                                                                                                                                                          │
+│  │                         - Factory AI Insights:                                                                                                                                           │
+│  │                           - Budget: $500,000                                                                                                                                             │
+│  │                           - Actual cost: $620,000                                                                                                                                        │
+│  │                           - Cost overrun: $120,000                                                                                                                                       │
+│  │                           - Delay: 45 days                                                                                                                                               │
+│  │                                                                                                                                                                                          │
+│  │                         - GraphRAG Platform:                                                                                                                                             │
+│  │                           - Budget: $650,000                                                                                                                                             │
+│  │                           - Actual cost: $720,000                                                                                                                                        │
+│  │                           - Cost overrun: $70,000                                                                                                                                        │
+│  │                           - Delay: 35 days                                                                                                                                               │
+│  │                                                                                                                                                                                          │
+│  │                         Source: business/projects/PRJ004_graphrag_platform.md and business/projects/PRJ005_factory_ai_insights.md                                                        │
+│  │     Expected Output:    Factory AI Insights has both the larger cost overrun and the longer delay. It is $120,000 over budget and delayed by 45 days, compared with GraphRAG Platform    │
+│  │                         at $70,000 over budget and 35 days delayed.                                                                                                                      │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.17                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 0.83                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_29                                                                                                                                                                            │
+│  ├──   Input:              Which completed projects finished under budget?                                                                                                                  │
+│  │     Actual Output:      The completed projects that finished under budget are:                                                                                                           │
+│  │                                                                                                                                                                                          │
+│  │                         1. Azure Modernization for FinTrust, with a budget of $700,000 and actual cost of $650,000.                                                                      │
+│  │                         2. Snowflake Platform for GlobalBank, with a budget of $600,000 and actual cost of $550,000.                                                                     │
+│  │                                                                                                                                                                                          │
+│  │                         Both projects had no recorded delays.                                                                                                                            │
+│  │     Expected Output:    Azure Modernization, Snowflake Platform, Databricks Analytics, and Retail Recommendation Engine all finished under budget.                                       │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.67                 │ 0.70                              │ N/A                      │
+│                 FAIL           │ Contextual Recall                                                    │ 0.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_30                                                                                                                                                                            │
+│  ├──   Input:              What industry and region is TechNova in?                                                                                                                         │
+│  │     Actual Output:      TechNova is in the Technology industry and is located in the North America region. This information is based on the sales opportunity data for the GraphRAG      │
+│  │                         Platform project.                                                                                                                                                │
+│  │     Expected Output:    TechNova is in the Technology industry and the North America region.                                                                                             │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.33                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 FAIL           │ Contextual Precision                                                 │ 0.50                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_31                                                                                                                                                                            │
+│  ├──   Input:              What industry and region is MedCore in?                                                                                                                          │
+│  │     Actual Output:      MedCore is in the Healthcare industry and is located in the Europe region. This information is from the client account directory.                                │
+│  │     Expected Output:    MedCore is in the Healthcare industry and the Europe region.                                                                                                     │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.15                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_32                                                                                                                                                                            │
+│  ├──   Input:              Which sales representative covers APAC?                                                                                                                          │
+│  │     Actual Output:      The sales representative covering the APAC region is Rahul Gupta.                                                                                                │
+│  │     Expected Output:    Rahul Gupta is the sales representative for the APAC region.                                                                                                     │
+│  └── Metrics                                                                                                                                                                                │
+│                Status          ┃ Metric                                                               ┃ Score                ┃ Threshold                         ┃ Reason                   │
+│      ━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                 FAIL           │ Contextual Relevancy                                                 │ 0.14                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Recall                                                    │ 1.00                 │ 0.70                              │ N/A                      │
+│                 PASS           │ Contextual Precision                                                 │ 1.00                 │ 0.70                              │ N/A                      │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Aggregate Metrics                                                                                                                                                                           │
+│                                                                                                                                                                                             │
+│  Metric                                               ┃ Average Score                       ┃ Pass Rate                                                                  ┃ Total            │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━ │
+│  Contextual Relevancy                                 │ 0.38                                │ 15.15% | passed=5 | failed=28                                              │ 33               │
+│  Contextual Recall                                    │ 0.97                                │ 96.97% | passed=32 | failed=1                                              │ 33               │
+│  Contextual Precision                                 │ 0.97                                │ 96.97% | passed=32 | failed=1                                              │ 33               │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+⚠ WARNING: No prompts logged.
+» Log prompts to evaluate and optimize your prompt templates and models.
+
+================================================================================
+
+
+✓ Evaluation completed 🎉! (time taken: 123.29s | token cost: 0.44861200000000007 USD)
+» Test Results (33 total tests):
+   » Pass Rate: 15.15% | Passed: 5 | Failed: 28
+
+ ================================================================================ 
+
+» Want to share evals with your team, or a place for your test cases to live? ❤️ 🏡
+  » Run 'deepeval view' to analyze and save testing results on Confident AI.
+
+
+Generator Evaluation
+============================================================
+✨ You're running DeepEval's latest Answer Correctness [GEval] Metric! (using gpt-4.1, strict=False, async_mode=True)...
+✨ You're running DeepEval's latest Groundedness [GEval] Metric! (using gpt-4.1, strict=False, async_mode=True)...
+✨ You're running DeepEval's latest Answer Relevancy [GEval] Metric! (using gpt-4.1, strict=False, async_mode=True)...
+
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ 🚀 DeepEval Evaluation Results                                                                                                                                                              │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_0 (Passed 3 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_1 (Passed 3 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_2 (Passed 3 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_3 (Passed 3 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_4 (Passed 3 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_5 (Passed 3 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_6 (Passed 3 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_7 (Passed 3 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_8 (Passed 3 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_9 (Passed 3 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_10 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_11 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_12 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_13 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_14 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_15 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_16 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_17 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_18 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_19 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_20 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_21 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_22 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_23 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_24 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_25 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_26 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_27 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_28 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                             │
+│  ❌ test_case_29                                                                                                                                                                            │
+│  ├──   Input:              Which completed projects finished under budget?                                                                                                                  │
+│  │     Actual Output:      The completed projects that finished under budget are:                                                                                                           │
+│  │                                                                                                                                                                                          │
+│  │                         1. Azure Modernization for FinTrust, with a budget of $700,000 and actual cost of $650,000.                                                                      │
+│  │                         2. Snowflake Platform for GlobalBank, with a budget of $600,000 and actual cost of $550,000.                                                                     │
+│  │                                                                                                                                                                                          │
+│  │                         Both projects had no recorded delays.                                                                                                                            │
+│  │     Expected Output:    Azure Modernization, Snowflake Platform, Databricks Analytics, and Retail Recommendation Engine all finished under budget.                                       │
+│  └── Metrics                                                                                                                                                                                │
+│       Status ┃ Metric                     ┃ Score ┃ Threshold ┃ Reason                                                                                                                      │
+│      ━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│        FAIL  │ Answer Correctness [GEval] │ 0.54  │ 0.70      │ The actual output correctly identifies Azure Modernization and Snowflake Platform as completed projects that finished       │
+│              │                            │       │           │ under budget, matching part of the expected output. However, it omits Databricks Analytics and Retail Recommendation        │
+│              │                            │       │           │ Engine, which are also required by the question. The inclusion of extra details about budgets and delays is acceptable,     │
+│              │                            │       │           │ but the missing projects represent a significant shortcoming.                                                               │
+│        PASS  │ Groundedness [GEval]       │ 1.00  │ 0.70      │ The response accurately identifies both complet...                                                                          │
+│        PASS  │ Answer Relevancy [GEval]   │ 1.00  │ 0.70      │ The response directly answers the user's questi...                                                                          │
+│                                                                                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_30 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_31 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_32 (Passed 3 metrics)                                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Aggregate Metrics                                                                                                                                                                           │
+│                                                                                                                                                                                             │
+│  Metric                                                        ┃ Average Score                    ┃ Pass Rate                                                              ┃ Total          │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━ │
+│  Answer Correctness [GEval]                                    │ 0.97                             │ 96.97% | passed=32 | failed=1                                          │ 33             │
+│  Groundedness [GEval]                                          │ 1.00                             │ 100.00% | passed=33 | failed=0                                         │ 33             │
+│  Answer Relevancy [GEval]                                      │ 1.00                             │ 100.00% | passed=33 | failed=0                                         │ 33             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+⚠ WARNING: No prompts logged.
+» Log prompts to evaluate and optimize your prompt templates and models.
+
+================================================================================
+
+
+✓ Evaluation completed 🎉! (time taken: 68.01s | token cost: 0.14964200000000002 USD)
+» Test Results (33 total tests):
+   » Pass Rate: 96.97% | Passed: 32 | Failed: 1
+
+ ================================================================================ 
+
+» Want to share evals with your team, or a place for your test cases to live? ❤️ 🏡
+  » Run 'deepeval view' to analyze and save testing results on Confident AI.
+
+
+
+Negative / Missing-Information Evaluation
+============================================================
+✨ You're running DeepEval's latest Unknown / Refusal Correctness [GEval] Metric! (using gpt-4.1, strict=False, async_mode=True)...
+✨ You're running DeepEval's latest Answer Relevancy [GEval] Metric! (using gpt-4.1, strict=False, async_mode=True)...
+
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ 🚀 DeepEval Evaluation Results                                                                                                                                                              │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_0 (Passed 2 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_1 (Passed 2 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_2 (Passed 2 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_3 (Passed 2 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_4 (Passed 2 metrics)                                                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Aggregate Metrics                                                                                                                                                                           │
+│                                                                                                                                                                                             │
+│  Metric                                                                       ┃ Average Score                ┃ Pass Rate                                                    ┃ Total         │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━ │
+│  Unknown / Refusal Correctness [GEval]                                        │ 0.97                         │ 100.00% | passed=5 | failed=0                                │ 5             │
+│  Answer Relevancy [GEval]                                                     │ 0.95                         │ 100.00% | passed=5 | failed=0                                │ 5             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+⚠ WARNING: No prompts logged.
+» Log prompts to evaluate and optimize your prompt templates and models.
+
+================================================================================
+
+
+✓ Evaluation completed 🎉! (time taken: 8.78s | token cost: 0.011528 USD)
+» Test Results (5 total tests):
+   » Pass Rate: 100.0% | Passed: 5 | Failed: 0
+
+ ================================================================================ 
+
+» Want to share evals with your team, or a place for your test cases to live? ❤️ 🏡
+  » Run 'deepeval view' to analyze and save testing results on Confident AI.
